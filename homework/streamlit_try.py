@@ -8,8 +8,8 @@ import numpy as np
 #%%
 
 road_id_list=[137,1143,1191,1199,1200]
-true_speed=pd.read_csv('true_speed.csv',index_col=0)
-pred_speed=pd.read_csv('pred_speed.csv',index_col=0)
+true_speed=pd.read_csv('./true_speed.csv',index_col=0)
+pred_speed=pd.read_csv('./pred_speed.csv',index_col=0)
 option=st.selectbox('Select Road ID',true_speed.columns)
 pred_color=st.selectbox('SELECT Pred Color',['orange','green','blue','red',])
 true_color=st.selectbox('SELECT True Color',['green','red','blue','orange'])
