@@ -16,8 +16,9 @@ true_color=st.selectbox('SELECT True Color',['green','red','blue','orange'])
 
 #%%
 fig,ax=plt.subplots()
-ax.plot(true_speed.loc[:,option],color=true_color)
-ax.plot(pred_speed.loc[:,option],color=pred_color)
+ax.plot(true_speed.loc[:,option],color=true_color,label='true')
+ax.plot(pred_speed.loc[:,option],color=pred_color,label='pred')
+ax.legend()
 st.pyplot(fig)
 # st.pyplot(pred_speed.loc[:,option])
 # df=pd.concat((pred_speed.loc[:,option],true_speed.loc[:,option]),axis=1)
